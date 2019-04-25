@@ -8,8 +8,8 @@
 <h1>Weather Application result</h1>
 <!--<p th:text="'City name: ' + ${greeting.getCity_input()}" />-->
 <p th:text="'City name: ' + ${greeting.cityResponse_city()}" />
-<p th:text="'City temperature: ' + ${greeting.cityResponse_temperature()}" />
-
-<a href="/greeting">Submit another message</a>
+<p th:text="'City temperature: ' + ${greeting.cityResponse_temperature()}+' °C'" />
+<p th:text="'City pressure: ' + ${greeting.cityResponse_pressure()}+' hPa'" />
+<a href="/greeting">Check out different city.</a>
 </body>
 </html>
