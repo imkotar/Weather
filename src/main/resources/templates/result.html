@@ -3,13 +3,26 @@
 <head>
     <title>Weather Application</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<h1>Weather Application result</h1>
-<!--<p th:text="'City name: ' + ${greeting.getCity_input()}" />-->
-<p th:text="'City name: ' + ${greeting.cityResponse_city()}" />
-<p th:text="'City temperature: ' + ${greeting.cityResponse_temperature()}+' °C'" />
-<p th:text="'City pressure: ' + ${greeting.cityResponse_pressure()}+' hPa'" />
-<a href="/greeting">Check different city.</a>
+<h1>Weather details:</h1>
+<table>
+    <tr>
+        <td><p1 th:text="'City name:'"/></td>
+        <td><p2 th:text="${greeting.cityResponse_name()}"/></td>
+    </tr>
+    <tr>
+        <td><p1 th:text="'City temperature:'"/></td>
+        <td><p2 th:text="${greeting.cityResponse_temperature()}"/></td>
+    </tr>
+    <tr>
+        <td><p1 th:text="'City pressure:'"/></td>
+        <td><p2 th:text="${greeting.cityResponse_pressure()}"/></td>
+    </tr>
+</table>
+
+<a href="/greeting">Go back and see different city</a>
+
 </body>
 </html>

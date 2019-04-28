@@ -4,6 +4,7 @@ package MK.weather;
 public class City {
 
     private String city;
+    private String name;
     private String temperature;
     private String longitude;
     private String latitude;
@@ -42,4 +43,10 @@ public class City {
     }
 
     public void setPressure(String pressure) { this.pressure = pressure; }
+
+    public String getName() { return read.readApi(4, getCity()); }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

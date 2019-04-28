@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Weather Application</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Weather Application</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<h1>Weather Application Welcome Page</h1>
+<h1>Weather Application</h1>
 <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-    <p>Write a City name: <input type="text" th:field="*{city_input}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    <p>Write a city name: <input type="text" th:field="*{city_input}" /></p>
+    <button>See weather details</button>
 </form>
 </body>
 </html>

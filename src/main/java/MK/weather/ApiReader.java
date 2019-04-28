@@ -30,27 +30,33 @@ public class ApiReader {
 
             JSONObject myresponse = new JSONObject(response.toString());
             JSONObject main_object = new JSONObject(myresponse.getJSONObject("main").toString());
+            JSONObject name_object = new JSONObject(myresponse.toString());
             JSONObject coord_object = new JSONObject(myresponse.getJSONObject("coord").toString());
 
             //what will be red from api:
 
+            double pressure_value = main_object.getDouble("pressure");
+            String name = name_object.getString("name");
             double longitude = coord_object.getDouble("lon");
             double latitude = coord_object.getDouble("lat");
             double temp_value = main_object.getDouble("temp") - 273;
-            double pressure_value = main_object.getDouble("pressure");
+            temp_value*=100;
+            temp_value=Math.round(temp_value);
+            temp_value/=100;
 
-//            //double to string conversion
-//
-//            String longitude_string=String.valueOf(longitude);
-//            String latitude_string=String.valueOf(latitude);
-//            String temp_value_string=String.valueOf(temp_value);
+            //double to string conversion
+
+            String longitude_string=String.valueOf(longitude);
+            String latitude_string=String.valueOf(latitude);
+            String temp_value_string=String.valueOf(temp_value);
+            String pressure_value_string=String.valueOf(pressure_value);
 
             ArrayList<String> apiResponse = new ArrayList<>();
-            apiResponse.add(String.valueOf(temp_value));
+            apiResponse.add(temp_value_string +" °C");
             apiResponse.add(String.valueOf(longitude));
             apiResponse.add(String.valueOf(latitude));
-            apiResponse.add(String.valueOf(pressure_value));
-
+            apiResponse.add(pressure_value_string + " hPa");
+            apiResponse.add(name);
 
             return apiResponse.get(number);
 
