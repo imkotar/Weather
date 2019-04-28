@@ -22,7 +22,9 @@ public class Greeting {
     public String cityResponse_city(){
         return city.getCity();
     }
-
+    public String cityResponse_name(){
+        return city.getName();
+    }
     public String cityResponse_temperature(){
         return city.getTemperature();
     }
