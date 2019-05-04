@@ -12,7 +12,7 @@ public class WeatherController {
     @GetMapping("/greeting")
     public String greetingForm(Model model) {
         model.addAttribute("greeting", new Greeting());
-        return "greeting";
+        return "index";
     }
 
     @PostMapping("/greeting")

@@ -49,7 +49,6 @@ input {
 }
 
 button {
-
     width: 260px;
     height: 70px;
     padding: 20px;
@@ -59,13 +58,12 @@ button {
     font-size: 20px;
     margin-left: 10%;
 }
-a {
 
+a {
     width: 300px;
     padding: 20px;
     background-color: forestgreen;
     border: 3px solid darkgreen;
     color: snow;
     font-size: 20px;
-
 }
