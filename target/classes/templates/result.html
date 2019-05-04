@@ -7,7 +7,6 @@
 </head>
 <body>
 <h1>Weather details:</h1>
-<!--<p th:text="'City name: ' + ${greeting.getCity_input()}" />-->
 <table>
     <tr>
         <td><p1 th:text="'City name:'"/></td>
@@ -22,11 +21,6 @@
         <td><p2 th:text="${greeting.cityResponse_pressure()}"/></td>
     </tr>
 </table>
-
-<!--<p th:text="'City name: ' + ${greeting.cityResponse_city()}" />-->
-<!--<p th:text="'City temperature: ' + ${greeting.cityResponse_temperature()}+' °C'" />-->
-<!--<p th:text="'City pressure: ' + ${greeting.cityResponse_pressure()}+' hPa'" />-->
-<!--<a href="/greeting">See different city</a>-->
 
 <a href="/greeting">Go back and see different city</a>
 
